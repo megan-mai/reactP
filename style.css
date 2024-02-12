@@ -1,0 +1,14 @@
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities; 
+  
+  
+@font-face { 
+    font-family: "montreal"; 
+    src: url("assets/PPNeueMontreal-Book.otf"); 
+} 
+
+@font-face { 
+    font-family: "light"; 
+    src: url("assets/PPNeueMontreal-Thin.otf"); 
+} 

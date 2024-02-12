@@ -1,0 +1,55 @@
+{
+    "title": "spotify stream",
+    "sections": [
+        {
+            "title": "INTRO",
+            "body": [
+                {   
+                    "nodeType": "TextNode",
+                    "body": "bla bla bla",
+                    "header": "BLA"
+                },
+                {
+                    "nodeType": "TextNode",
+                    "body": "bla bla bla",
+                    "header": "BLA"
+                },
+                {
+                    "nodeType": "ImageNode",
+                    "url": "bla blo bla",
+                    "caption": "BLO"
+                },
+                {
+                    "nodeType": "TextNode",
+                    "body": "bla bla bla",
+                    "header": "BLA"
+                }
+            ]
+        },
+        {
+            "title": "test_project body",
+            "body": [
+                {
+                    "nodeType": "TextNode",
+                    "body": "bla bla bla",
+                    "header": "BLA"
+                },
+                {
+                    "nodeType": "TextNode",
+                    "body": "bla bla bla",
+                    "header": "BLA"
+                },
+                {
+                    "nodeType": "ImageNode",
+                    "url": "bla blo bla",
+                    "caption": "BLO"
+                },
+                {
+                    "nodeType": "TextNode",
+                    "body": "bla bla bla",
+                    "header": "BLA"
+                }
+            ]
+        }
+    ]
+}
