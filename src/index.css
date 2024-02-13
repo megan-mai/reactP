@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
     scroll-behavior: smooth;
+}
+
+* {
+    font-size: 0.9rem;
 }

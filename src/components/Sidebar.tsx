@@ -9,13 +9,13 @@ interface SidebarProps {
 
 const Sidebar = ({ setFilter, filter }: SidebarProps) => {
     return (
-        <div className=" w-[30%] min-w-[200px] h-full pt-[2.5rem] mr-[4em] sticky top-0 text-sm whitespace-nowrap">
+        <div className=" w-[30%] min-w-[200px] h-full pt-[2.5rem] mr-[4em] sticky top-0 whitespace-nowrap">
             <div
                 className="flex pb-[.2rem] justify-between bg-black bg-opacity-0 hover:bg-opacity-5 hover:cursor-pointer rounded-[.2em] hover:animate-fade  pt-[.5rem] pb-[.5rem]npm mb-[-.5em] "
                 id="profile"
             >
                 <div>Megan Mai</div>
-                <div>Design Engineer</div>
+                <div>Interface design</div>
             </div>
 
             <hr className="solid my-[.5rem]"></hr>
