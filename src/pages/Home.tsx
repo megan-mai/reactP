@@ -49,6 +49,7 @@ const Home = () => {
 
     return (
         <div className="App font-light text-sm">
+            {/* CONTAINER */}
             <div
                 id="container"
                 className="flex mx-auto w-[50vw] translate-x-[-7.5rem] "
@@ -57,7 +58,7 @@ const Home = () => {
 
                 <div
                     id="main"
-                    className=" pt-[2.5rem] pr-[2em] w-[70%]  min-w-[300px]"
+                    className=" pt-[3rem] pr-[2em] w-[70%]  min-w-[300px]"
                 >
                     <Header></Header>
 

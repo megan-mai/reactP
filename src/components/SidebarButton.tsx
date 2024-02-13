@@ -18,9 +18,9 @@ const SidebarButton = ({
     filter,
 }: SidebarProps) => {
     const clickedStyle =
-        "py-[.2em] flex justify-between opacity-100 hover:opacity-100 hover:cursor-pointer font-light text-sm";
+        "py-[.3em] flex justify-between opacity-100 hover:opacity-100 hover:cursor-pointer font-light text-sm";
     const unclickedStyle =
-        "py-[.2em] flex justify-between opacity-50 hover:opacity-100 hover:cursor-pointer font-light text-sm";
+        "py-[.3em] flex justify-between opacity-50 hover:opacity-100 hover:cursor-pointer font-light text-sm";
 
     return (
         <div

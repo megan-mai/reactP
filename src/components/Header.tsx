@@ -2,10 +2,15 @@ const Header = () => {
     return (
         <div>
             <header className="leading-[1.3rem]">
-                I’m a product designer passionate about working through
-                ambiguity and designing tools that empower seamless and
-                efficient work for people and businesses. Previously designed at
-                Gusto, Mastercard, Tara AI, Momo.
+                At the intersection of brand awareness, technical understanding,
+                and visual reductiveness, useful software is built and
+                maintained.
+                <br></br>
+                Crafting thoughtful interfaces takes time, and it is only
+                through slow design that we are able to refine, polish,
+                engineer, and successfully launch great products.
+                <br></br>
+                Read about me or inspect my work.
             </header>
         </div>
     );
