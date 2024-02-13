@@ -1,23 +1,37 @@
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 
 interface SidebarProps {
-    url: string;
     title: string;
+    setFilter?: Dispatch<SetStateAction<string>>;
+    filter?: string;
+    id?: string;
+    url?: string;
     details?: string;
 }
 
-const SidebarButton = (props: SidebarProps) => {
-    return(
-        <div className = "py-[.2em] flex justify-between opacity-50 hover:opacity-100 hover:cursor-pointer font-light text-sm">
-        <a href={props.url}> 
-        {props.title}
-        </a>
+const SidebarButton = ({
+    url,
+    title,
+    details,
+    setFilter,
+    id,
+    filter,
+}: SidebarProps) => {
+    const clickedStyle =
+        "py-[.2em] flex justify-between opacity-100 hover:opacity-100 hover:cursor-pointer font-light text-sm";
+    const unclickedStyle =
+        "py-[.2em] flex justify-between opacity-50 hover:opacity-100 hover:cursor-pointer font-light text-sm";
 
-        <div>{props.details}</div>
+    return (
+        <div
+            onClick={() => setFilter(id)}
+            className={filter === id ? clickedStyle : unclickedStyle}
+        >
+            <a>{title}</a>
 
+            <div>{details}</div>
         </div>
-
-    )
-}
+    );
+};
 
 export default SidebarButton;
-
