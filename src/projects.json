@@ -1,0 +1,1285 @@
+{
+    "projects": [
+        {
+            "title": "Stream Slow",
+            "date": "September 2024",
+            "skills": "figma, notion",
+            "url": "/Spotify",
+            "visit": "https://serious-parent-4b6.notion.site/Stream-Slow-b1e77485d4c84675ab5400b085429916",
+            "thumbnail": "assets/thumbnails/spotify.png",
+            "tags": ["UX"],
+            "desc": "A UX case study on Spotify’s live activity feature and how it can be used to improve music streaming and discovery.",
+            "headerdesc": "For this project, I researched and implemented a design approach that would mitigate the pitfalls of the modern streaming model.",
+            "sections": [
+                {
+                    "title": "Framing The Problem",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "The abundance of options and ease of access fail to challenge user’s tastes, causing decision paralysis and close mindedness. ",
+                            "header": "An embarrassment of riches"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users should have the option to put their account on slow- where they can tune into the live activity of the users they follow, but are limited in their ability to select and skip songs.",
+                            "header": "Community-based music discovery."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users have become increasingly intolerant of that which isn’t precisely what they want to hear at the time:",
+                            "header": "Abundance of choice in streaming causes decision paralysis."
+                        },
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "...65% of respondents only listen to music they know. On a more positive note, 60% of respondents wanted to discover new music. But their quest was lost to apathy or “being too busy and feeling overwhelmed by the amount of choice available” (the two most common blockers recorded by survey respondents). Deezer calls the phenomenon outlined by their survey results as ’musical paralysis",
+                            "source": "sound of life, 2022 ",
+                            "url": "https://www.soundoflife.com/blogs/mixtape/discover-new-music-musical-paralysis"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": " Music taste is one of the few things that don’t necessarily benefit from uniformity. Algorithmic reccomendation systems on their own fail because they by nature predict what users would like based on what they already like.",
+                            "header": "Algorithmic reccomendation systems have serious limitations."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/spotify/big_boi.png",
+                                "assets/spotify/hozier.png"
+                            ],
+
+                            "cols": "2"
+                        }
+                    ]
+                },
+
+                {
+                    "title": "Market Research and Analysis",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Social media platforms for all manner of media consumption (movies, books, and retail) are more popular than ever. However, many music streaming social media platforms have come and gone. For the most part these platforms failed due to licensing issues. ",
+                            "header": "Historically, music and social media don’t mix."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/spotify/cymbal.png",
+                                "assets/spotify/8tracks.png",
+                                "assets/spotify/lastfm.png"
+                            ],
+                            "captions": ["cymbal", "8tracks", "lastfm"],
+                            "cols": "3"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "In 2016, Instagram introduced the ‘stories’ feature, which was a way for users to provide live, temporary updates to their followers. This feature was pioneered by snapchat. Users eventually came to use instagram’s story feature more, despite the features being identical.",
+                            "header": "Proximity to the main platform matters."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/spotify/sc.png",
+                                "assets/spotify/mo.png"
+                            ],
+                            "cols": "2"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Media consumption and curation platforms like goodreads, letterboxd, and pinterest are used not only for their main curatorial purposes, but with social interaction in mind",
+                            "header": "Using non-social media platforms as social media platforms"
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/spotify/letterboxd.png",
+                            "size": "70",
+                            "caption": "The user uses the review format to crack a joke in the way that one does on twitter."
+                        }
+                    ]
+                },
+                {
+                    "title": "User Types",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:"
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                " high curatorial use, low output",
+                                "low curatorial use, low output",
+                                "high curatorial use, high output",
+                                "low curatorial use, high output"
+                            ]
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/spotify/locur.png",
+                                "assets/spotify/hicur.png"
+                            ],
+                            "captions": [
+                                "high curatorial use",
+                                "low curatorial use"
+                            ],
+                            "cols": "2"
+                        }
+                    ]
+                },
+                {
+                    "title": "User Surveys",
+                    "body": [
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "I sometimes feel nervous to listen to a guilty pleasure song because i know there’s a chance that one of my friends will- and they have- catch me and call me out for it.",
+                            "source": "",
+                            "url": ""
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                "moderate to highly curatorial users check social activity the most",
+                                "moderate and non curatorial users claim to make playlists for themselves",
+                                "highly curatorial users visit their own playlists less than non curatorial users do",
+                                "only the curatorial users use desktop",
+                                "ll users, to some degree, use algorithimic features to listen to music"
+                            ],
+                            "header": "Main Insights"
+                        }
+                    ]
+                },
+                {
+                    "title": "Design Decisions + Final Screens",
+                    "body": [
+                        {
+                            "nodeType": "BulletNode",
+                            "header": "Principles",
+                            "points": [
+                                "Do not overwhelm the user",
+                                "The perfect amount of friction",
+                                "Users want to be seen",
+                                "Structurally aligned with the current streaming interface",
+                                "Modularity is key "
+                            ]
+                        },
+
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/spotify/sketch1.png",
+                                "assets/spotify/sketch2.png",
+                                "assets/spotify/sketch3.png",
+                                "assets/spotify/sketch4.png"
+                            ],
+                            "caption": "",
+                            "cols": "2"
+                        },
+
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/spotify/finalscreen1.png",
+                                "assets/spotify/finalscreen2.png"
+                            ],
+                            "caption": "wireframes",
+                            "cols": "1",
+                            "size": "100"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [],
+                            "caption": "Prototypes"
+                        }
+                    ]
+                },
+                {
+                    "title": "Lessons Learned",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:",
+                            "header": "Many important questions can’t be answered using direct questions."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Preliminary research for this project revealed to me that even a quantitatively minute difference can lead to a completely different outcome. This pertains specifically to my competitive audit, which revealed the failing trait of many competitive platforms to simply be proximity between profile and projection (sharing of activity).",
+                            "header": "User attention and preference are threshold-based."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Youtube Undo",
+            "date": " September 2024",
+            "skills": "figma",
+            "url": "/Youtube",
+            "visit": "https://serious-parent-4b6.notion.site/Undo-for-Video-Scrubbing-9813c3922edc4645b2b72efc02b568af",
+            "thumbnail": "assets/thumbnails/youtube.png",
+            "tags": ["UX"],
+            "headerdesc": "For this project, I researched and implemented a design approach that would mitigate the pitfalls of the modern streaming model.",
+            "desc": "An interaction design case study on time stamps and video scrubbing in Youtube videos.",
+            "sections": [
+                {
+                    "title": "Framing The Problem",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Reading comments has long been an instrinsic part of the Youtube viewing experience. However, this has enabled users to engage in excessive multitasking, leading to incomplete viewing duration and preference for an abridged and disjointed viewing experience.",
+                            "header": ""
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "This project proposes to add features that suit the increasingly sporadic and fast-paced sensibilities of many users today.",
+                            "header": ""
+                        }
+                    ]
+                },
+
+                {
+                    "title": "Behavioral Analysis",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "A prominent part of the viewing experience is seeing what fellow viewers have to say about the video one is watching. Users highlight exciting portions of the video, respond to the creator, and even create original in-jokes and memes by referencing points in the video. ",
+                            "header": "Commentary-focused viewing experience"
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/youtube/dvorak.png",
+                            "caption": "A comment on a video about Dvorak’s 9th Symphony pointing out a famous musical motif and joking about its similarity to the ‘Jaws’ theme"
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                "Users may become embroiled in the later portion of the video or find it tedious to memorize and locate their original position",
+                                "Users get into the habit of consuming longform video content in a piecewise, disjointed manner. ",
+                                "As a result, youtube creators see less full viewership of their content, and are prone to misinterpretations or fallacious generalizations citing their content"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Existing Features",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Youtube has implemented a number of features that address these behaviors:"
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                "picture-in-picture view: a premium feature that allows the user to scroll through their phone as the video plays in a small floating window in a corner of the screen. ",
+                                "‘most replayed’ feature shows users the moment of interest in a video so users can skip to it",
+                                "(in beta) comments view mode shows timestamp comments at the time that they reference",
+                                "youtube shorts: short form video content"
+                            ]
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": " Instead of encouraging the user to change their behavior, these features alter the viewing experience to accomodate them, to the detriment of creators and users alike."
+                        }
+                    ]
+                },
+                {
+                    "title": "Solution",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Encourage users to pick up where they left off by allowing them to flexibly jump to different points in the video without losing track of their original place. "
+                        }
+                    ]
+                },
+                {
+                    "title": "Research Synthesis",
+                    "body": [
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                "All users exihibit inattentive behavior while watching youtube videos. ",
+                                "For longer videos, (10-30 mins) those who skip to time stamps mentioned in comments do not return to their original place, but not because it is difficult to locate. ",
+                                "There is a potential correlation between not finishing videos and skipping through them."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Journey Map",
+                    "body": [
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/youtube/journeymap.png"
+                        }
+                    ]
+                },
+                {
+                    "title": "Sketch",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "If a user jumps to a timestamp nonetheless, they should be able to conveniently jump back to their original place. This is the design I ultimately went with."
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/youtube/sketch.jpg",
+                            "caption": "sketch"
+                        }
+                    ]
+                },
+                {
+                    "title": "User Testing",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "The first round of testing brought the following issue to my attention: what if a user wanted to jump to a time stamp from comment and watch the video from then on out?"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "True to the name of this study, I wanted this feature to simulate ‘undoing’, where each action is strung to the next, chronologically. "
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/youtube/proto.gif",
+                            "caption": "proto",
+                            "size": "45"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I thought I could make the process of undoing easier by dedicating a single gesture to undoing, just like with typing:"
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/youtube/doubletap.gif",
+                            "caption": "Youtube's double tap to skip feature",
+                            "size": "60"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "However, youtube mobile has already dedicated double tapping to skipping ahead in videos and swiping to scrubbing through. I determined that this approach was prone to confusion and misclicking. I was concerned about users accidentally triggering the wrong feature when double tapping and triple tapping, and by experience understood that the double-tap-to-skip feature on the youtube app was slightly unreliable due to *single tapping* also having a purpose (to pull up the control panel on the frame)."
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/youtube/doubletap2.gif",
+                            "caption": "The user’s double tap gesture is inaccurately registered as a single tap.",
+                            "size": "60"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I had my participant attempt to double tap a button that I alleged was meant to trigger something. In reality the button triggered nothing. I recorded the timing of each tap and checked to see if any of them landed in a manner that would be registered as a triple tap. The participant triggered the triple tap gesture several times. This confirmed my suspicions that triple tapping was prone to being mistakenly triggered.",
+                            "header": "Method"
+                        }
+                    ]
+                },
+                {
+                    "title": "Interaction",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "On the mobile app, scrubbing through the app is a very tactile experience, with very ‘general’  interactions:"
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                " tapping either half of the video frame to move 10 seconds forwards or backwards",
+                                "tapping and holding to scrub through the video"
+                            ]
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I wanted to mirror this nonspecificity. Instead of ‘bookmarking’ the timestamp, I opted to make the entire watched part of the video up until the timestamp a different color. To navigate back to the original timestamp the user need not click specifically on the time stamp, but just click on the alternate timeline as a whole."
+                        },
+
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I wanted to mirror this nonspecificity. Instead of ‘bookmarking’ the timestamp, I opted to make the entire watched part of the video up until the timestamp a different color. To navigate back to the original timestamp the user need not click specifically on the time stamp, but just click on the alternate timeline as a whole."
+                        },
+
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Originally, I wanted to keep the original timeline the default red color and make the new timeline  a new color, but I decided that the reverse would prompt the user to click back to the original timeline more. I confirmed this assumption with user testing.",
+                            "header": "Colors"
+                        },
+
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I also initially kept the circular marker such that both color and the circle marked the original timestamp, but I figured that would confuse the user as to where to click (could cause them to be too specific about where to click to revert back to original time)",
+                            "header": "Marker"
+                        },
+
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/youtube/markers.png",
+                            "caption": "Top to bottom: just marker, marker with alternate timeline color, just timeline color.",
+                            "size": "45"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/youtube/snapping.gif",
+                                "assets/youtube/snapping.gif",
+                                "assets/youtube/stopping.gif"
+                            ],
+
+                            "cols": "3",
+                            "captions": [
+                                "Navigate by dragging the round cursor and snapping into place",
+                                "Navigate by dragging the cursor and stopping in place.",
+                                "Click on alternate timeline to navigate back."
+                            ]
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I found the act of tapping too specific and still a bit difficult to execute with the thin video timeline, so I also included an option where when the user drags the round marker back into the territory, it snaps back to where it was. "
+                        }
+                    ]
+                },
+                {
+                    "title": "In Conclusion",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Doing the fieldwork for UX design led me to believe that a good case study *is* clear, concise, and linear. What I had failed to realize was that a good case study is actually just *presented as such*, that user experience issues are incredibly complex by nature, and that the process, which reveals extraneous problems and solutions in equal part, actively resists distillation. I realized that half of the battle is explaining my decisions and how I came to the conclusions that I did.",
+                            "header": "What I learned"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Indeed, the success of vine and tiktok indicate a dwindling attention span across users webwide, but that doesn’t necessarily mean that users don’t have an appetite for traditional video content. It simply means the ways that one consumes video content has changed. Youtube has implemented their own ‘shorts’ feature in response to this newly discovered demand for short content while slightly neglecting the service that *they* uniquely provide. Adapting the long form viewing experience to allow for more sporadic yet complete consumption serves the users demands the best.",
+                            "header": "Broader Implications"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I had grandiose plans of creating a full-bodied, elaborate platform to solve this issue. Instead, the solution I had come up with was woefully small- at least in terms of what would be impressive on paper (or in presentation). At the same time, I’m quite satisfied with the simplicity of this solution and recognize in many practical ways that often times the simplest solution is the most apt.",
+                            "header": "Occam’s Razor"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Daylight",
+            "date": "2023",
+            "skills": "figma, notion, Octopus.do",
+            "url": "https://serious-parent-4b6.notion.site/Farm-to-table-produce-delivery-app-25726875911542b0abee9a1541a5763f",
+            "thumbnail": "assets/thumbnails/daylight.png",
+            "tags": ["UX"],
+            "desc": "Mobile interface for local and fresh produce delivery service.",
+            "external": true,
+            "sections": [
+                {
+                    "title": "Stream Slow",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "For this project, I researched and implemented a design approach that would mitigate the pitfalls of the modern streaming model. ",
+                            "header": ""
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/test.png",
+                            "caption": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Framing The Problem",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "The abundance of options and ease of access fail to challenge user’s tastes, causing decision paralysis and close mindedness. ",
+                            "header": "An embarrassment of riches"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users should have the option to put their account on slow- where they can tune into the live activity of the users they follow, but are limited in their ability to select and skip songs.",
+                            "header": "Community-based music discovery."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users have become increasingly intolerant of that which isn’t precisely what they want to hear at the time:",
+                            "header": "Abundance of choice in streaming causes decision paralysis."
+                        },
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "...65% of respondents only listen to music they know. On a more positive note, 60% of respondents wanted to discover new music. But their quest was lost to apathy or “being too busy and feeling overwhelmed by the amount of choice available” (the two most common blockers recorded by survey respondents). Deezer calls the phenomenon outlined by their survey results as ’musical paralysis",
+                            "source": "sound of life, 2022 ",
+                            "url": "https://www.soundoflife.com/blogs/mixtape/discover-new-music-musical-paralysis"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": " Music taste is one of the few things that don’t necessarily benefit from uniformity. Algorithmic reccomendation systems on their own fail because they by nature predict what users would like based on what they already like.",
+                            "header": "Algorithmic reccomendation systems have serious limitations."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/big_boi.png", "assets/hozier.png"],
+                            "caption": "group nodes"
+                        }
+                    ]
+                },
+
+                {
+                    "title": "Market Research and Analysis",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Social media platforms for all manner of media consumption (movies, books, and retail) are more popular than ever. However, many music streaming social media platforms have come and gone. For the most part these platforms failed due to licensing issues. ",
+                            "header": "Historically, music and social media don’t mix."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/cymbal.png",
+                                "assets/8trcks.png",
+                                "assets/lastfm.png"
+                            ],
+                            "caption": "left to right: 8tracks, cymbal, lastfm"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "In 2016, Instagram introduced the ‘stories’ feature, which was a way for users to provide live, temporary updates to their followers. This feature was pioneered by snapchat. Users eventually came to use instagram’s story feature more, despite the features being identical.",
+                            "header": "Proximity to the main platform matters."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/sc.png", "assets/mo.png"],
+                            "caption": "left to right: snapchat and microsoft"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Media consumption and curation platforms like goodreads, letterboxd, and pinterest are used not only for their main curatorial purposes, but with social interaction in mind",
+                            "header": "Using non-social media platforms as social media platforms"
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/letterboxd.png",
+                            "size": "HELOOOO",
+                            "caption": "The user above does not betray anything about their opinion on the film, but rather uses the review format to crack a joke in the way that one does on twitter."
+                        }
+                    ]
+                },
+                {
+                    "title": "User Types",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:"
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                " high curatorial use, low output",
+                                "low curatorial use, low output",
+                                "high curatorial use, high output",
+                                "low curatorial use, high output"
+                            ]
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/locur.png", "assets/hicur.png"],
+                            "caption": "left to right: low curatorial profile, high curatorial profile"
+                        }
+                    ]
+                },
+                {
+                    "title": "User Surveys",
+                    "body": [
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "I sometimes feel nervous to listen to a guilty pleasure song because i know there’s a chance that one of my friends will- and they have- catch me and call me out for it.",
+                            "source": "",
+                            "url": ""
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                "moderate to highly curatorial users check social activity the most",
+                                "moderate and non curatorial users claim to make playlists for themselves",
+                                "highly curatorial users visit their own playlists less than non curatorial users do",
+                                "only the curatorial users use desktop",
+                                "ll users, to some degree, use algorithimic features to listen to music"
+                            ],
+                            "header": "Main Insights"
+                        }
+                    ]
+                },
+                {
+                    "title": "Design Decisions + Final Screens",
+                    "body": [
+                        {
+                            "nodeType": "BulletNode",
+                            "header": "Principles",
+                            "points": [
+                                "Do not overwhelm the user",
+                                "The perfect amount of friction",
+                                "Users want to be seen",
+                                "Structurally aligned with the current streaming interface",
+                                "Modularity is key "
+                            ]
+                        },
+
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/sketch1.png",
+                                "assets/sketch2.png"
+                            ],
+                            "caption": ""
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/sketch3.png",
+                                "assets/sketch4.png"
+                            ],
+                            "caption": "sketches"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/wf1.png", "assets/wf2.png"],
+                            "caption": "wireframes"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/pt1.png", "assets/pt2.png"],
+                            "caption": "Prototypes"
+                        }
+                    ]
+                },
+                {
+                    "title": "Lessons Learned",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:",
+                            "header": "Many important questions can’t be answered using direct questions."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Preliminary research for this project revealed to me that even a quantitatively minute difference can lead to a completely different outcome. This pertains specifically to my competitive audit, which revealed the failing trait of many competitive platforms to simply be proximity between profile and projection (sharing of activity).",
+                            "header": "User attention and preference are threshold-based."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Japanese and Dutch-Anglo style Auctions Cards",
+            "date": "2023",
+            "skills": "figma, notion, Octopus.do",
+            "url": "https://caro.bid/",
+            "thumbnail": "assets/thumbnails/caro.png",
+            "tags": ["UX"],
+            "external": true,
+            "desc": "Mobile interface for Japanese and Dutch-Anglo Auction Cards in conjunction with Caro's dynamic pricing system. Inspired by WarioWare.",
+            "sections": [
+                {
+                    "title": "Stream Slow",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "For this project, I researched and implemented a design approach that would mitigate the pitfalls of the modern streaming model. ",
+                            "header": ""
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/thumbnails/daylight.png",
+                            "caption": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Framing The Problem",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "The abundance of options and ease of access fail to challenge user’s tastes, causing decision paralysis and close mindedness. ",
+                            "header": "An embarrassment of riches"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users should have the option to put their account on slow- where they can tune into the live activity of the users they follow, but are limited in their ability to select and skip songs.",
+                            "header": "Community-based music discovery."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users have become increasingly intolerant of that which isn’t precisely what they want to hear at the time:",
+                            "header": "Abundance of choice in streaming causes decision paralysis."
+                        },
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "...65% of respondents only listen to music they know. On a more positive note, 60% of respondents wanted to discover new music. But their quest was lost to apathy or “being too busy and feeling overwhelmed by the amount of choice available” (the two most common blockers recorded by survey respondents). Deezer calls the phenomenon outlined by their survey results as ’musical paralysis",
+                            "source": "sound of life, 2022 ",
+                            "url": "https://www.soundoflife.com/blogs/mixtape/discover-new-music-musical-paralysis"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": " Music taste is one of the few things that don’t necessarily benefit from uniformity. Algorithmic reccomendation systems on their own fail because they by nature predict what users would like based on what they already like.",
+                            "header": "Algorithmic reccomendation systems have serious limitations."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/big_boi.png", "assets/hozier.png"],
+                            "caption": "group nodes"
+                        }
+                    ]
+                },
+
+                {
+                    "title": "Market Research and Analysis",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Social media platforms for all manner of media consumption (movies, books, and retail) are more popular than ever. However, many music streaming social media platforms have come and gone. For the most part these platforms failed due to licensing issues. ",
+                            "header": "Historically, music and social media don’t mix."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/cymbal.png",
+                                "assets/8trcks.png",
+                                "assets/lastfm.png"
+                            ],
+                            "caption": "left to right: 8tracks, cymbal, lastfm"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "In 2016, Instagram introduced the ‘stories’ feature, which was a way for users to provide live, temporary updates to their followers. This feature was pioneered by snapchat. Users eventually came to use instagram’s story feature more, despite the features being identical.",
+                            "header": "Proximity to the main platform matters."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/sc.png", "assets/mo.png"],
+                            "caption": "left to right: snapchat and microsoft"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Media consumption and curation platforms like goodreads, letterboxd, and pinterest are used not only for their main curatorial purposes, but with social interaction in mind",
+                            "header": "Using non-social media platforms as social media platforms"
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/letterboxd.png",
+                            "caption": "The user above does not betray anything about their opinion on the film, but rather uses the review format to crack a joke in the way that one does on twitter."
+                        }
+                    ]
+                },
+                {
+                    "title": "User Types",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:"
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                " high curatorial use, low output",
+                                "low curatorial use, low output",
+                                "high curatorial use, high output",
+                                "low curatorial use, high output"
+                            ]
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/locur.png", "assets/hicur.png"],
+                            "caption": "left to right: low curatorial profile, high curatorial profile"
+                        }
+                    ]
+                },
+                {
+                    "title": "User Surveys",
+                    "body": [
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "I sometimes feel nervous to listen to a guilty pleasure song because i know there’s a chance that one of my friends will- and they have- catch me and call me out for it.",
+                            "source": "",
+                            "url": ""
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                "moderate to highly curatorial users check social activity the most",
+                                "moderate and non curatorial users claim to make playlists for themselves",
+                                "highly curatorial users visit their own playlists less than non curatorial users do",
+                                "only the curatorial users use desktop",
+                                "ll users, to some degree, use algorithimic features to listen to music"
+                            ],
+                            "header": "Main Insights"
+                        }
+                    ]
+                },
+                {
+                    "title": "Design Decisions + Final Screens",
+                    "body": [
+                        {
+                            "nodeType": "BulletNode",
+                            "header": "Principles",
+                            "points": [
+                                "Do not overwhelm the user",
+                                "The perfect amount of friction",
+                                "Users want to be seen",
+                                "Structurally aligned with the current streaming interface",
+                                "Modularity is key "
+                            ]
+                        },
+
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/sketch1.png",
+                                "assets/sketch2.png"
+                            ],
+                            "caption": ""
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/sketch3.png",
+                                "assets/sketch4.png"
+                            ],
+                            "caption": "sketches"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/wf1.png", "assets/wf2.png"],
+                            "caption": "wireframes"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/pt1.png", "assets/pt2.png"],
+                            "caption": "Prototypes"
+                        }
+                    ]
+                },
+                {
+                    "title": "Lessons Learned",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:",
+                            "header": "Many important questions can’t be answered using direct questions."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Preliminary research for this project revealed to me that even a quantitatively minute difference can lead to a completely different outcome. This pertains specifically to my competitive audit, which revealed the failing trait of many competitive platforms to simply be proximity between profile and projection (sharing of activity).",
+                            "header": "User attention and preference are threshold-based."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Attributive vs. Relational Properties in Similarity and Difference Judgments",
+            "date": "2021",
+            "skills": "research",
+            "url": "https://docs.google.com/document/d/1AU7iv_1onhmGSv963NVMDQHXUmHmlUDhR9rRPa5doss/",
+            "thumbnail": "assets/thumbnails/simdiff4.png",
+            "tags": ["research"],
+            "desc": "A study on analogical reasoning. Done at the Computational Vision and Learning Lab at UCLA.",
+            "external": true,
+            "sections": [
+                {
+                    "title": "Stream Slow",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "For this project, I researched and implemented a design approach that would mitigate the pitfalls of the modern streaming model. ",
+                            "header": ""
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/thumbnails/daylight.png",
+                            "caption": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Framing The Problem",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "The abundance of options and ease of access fail to challenge user’s tastes, causing decision paralysis and close mindedness. ",
+                            "header": "An embarrassment of riches"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users should have the option to put their account on slow- where they can tune into the live activity of the users they follow, but are limited in their ability to select and skip songs.",
+                            "header": "Community-based music discovery."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users have become increasingly intolerant of that which isn’t precisely what they want to hear at the time:",
+                            "header": "Abundance of choice in streaming causes decision paralysis."
+                        },
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "...65% of respondents only listen to music they know. On a more positive note, 60% of respondents wanted to discover new music. But their quest was lost to apathy or “being too busy and feeling overwhelmed by the amount of choice available” (the two most common blockers recorded by survey respondents). Deezer calls the phenomenon outlined by their survey results as ’musical paralysis",
+                            "source": "sound of life, 2022 ",
+                            "url": "https://www.soundoflife.com/blogs/mixtape/discover-new-music-musical-paralysis"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": " Music taste is one of the few things that don’t necessarily benefit from uniformity. Algorithmic reccomendation systems on their own fail because they by nature predict what users would like based on what they already like.",
+                            "header": "Algorithmic reccomendation systems have serious limitations."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/big_boi.png", "assets/hozier.png"],
+                            "caption": "group nodes"
+                        }
+                    ]
+                },
+
+                {
+                    "title": "Market Research and Analysis",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Social media platforms for all manner of media consumption (movies, books, and retail) are more popular than ever. However, many music streaming social media platforms have come and gone. For the most part these platforms failed due to licensing issues. ",
+                            "header": "Historically, music and social media don’t mix."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/cymbal.png",
+                                "assets/8trcks.png",
+                                "assets/lastfm.png"
+                            ],
+                            "caption": "left to right: 8tracks, cymbal, lastfm"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "In 2016, Instagram introduced the ‘stories’ feature, which was a way for users to provide live, temporary updates to their followers. This feature was pioneered by snapchat. Users eventually came to use instagram’s story feature more, despite the features being identical.",
+                            "header": "Proximity to the main platform matters."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/sc.png", "assets/mo.png"],
+                            "caption": "left to right: snapchat and microsoft"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Media consumption and curation platforms like goodreads, letterboxd, and pinterest are used not only for their main curatorial purposes, but with social interaction in mind",
+                            "header": "Using non-social media platforms as social media platforms"
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/letterboxd.png",
+                            "caption": "The user above does not betray anything about their opinion on the film, but rather uses the review format to crack a joke in the way that one does on twitter."
+                        }
+                    ]
+                },
+                {
+                    "title": "User Types",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:"
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                " high curatorial use, low output",
+                                "low curatorial use, low output",
+                                "high curatorial use, high output",
+                                "low curatorial use, high output"
+                            ]
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/locur.png", "assets/hicur.png"],
+                            "caption": "left to right: low curatorial profile, high curatorial profile"
+                        }
+                    ]
+                },
+                {
+                    "title": "User Surveys",
+                    "body": [
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "I sometimes feel nervous to listen to a guilty pleasure song because i know there’s a chance that one of my friends will- and they have- catch me and call me out for it.",
+                            "source": "",
+                            "url": ""
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                "moderate to highly curatorial users check social activity the most",
+                                "moderate and non curatorial users claim to make playlists for themselves",
+                                "highly curatorial users visit their own playlists less than non curatorial users do",
+                                "only the curatorial users use desktop",
+                                "ll users, to some degree, use algorithimic features to listen to music"
+                            ],
+                            "header": "Main Insights"
+                        }
+                    ]
+                },
+                {
+                    "title": "Design Decisions + Final Screens",
+                    "body": [
+                        {
+                            "nodeType": "BulletNode",
+                            "header": "Principles",
+                            "points": [
+                                "Do not overwhelm the user",
+                                "The perfect amount of friction",
+                                "Users want to be seen",
+                                "Structurally aligned with the current streaming interface",
+                                "Modularity is key "
+                            ]
+                        },
+
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/sketch1.png",
+                                "assets/sketch2.png"
+                            ],
+                            "caption": ""
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/sketch3.png",
+                                "assets/sketch4.png"
+                            ],
+                            "caption": "sketches"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/wf1.png", "assets/wf2.png"],
+                            "caption": "wireframes"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/pt1.png", "assets/pt2.png"],
+                            "caption": "Prototypes"
+                        }
+                    ]
+                },
+                {
+                    "title": "Lessons Learned",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:",
+                            "header": "Many important questions can’t be answered using direct questions."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Preliminary research for this project revealed to me that even a quantitatively minute difference can lead to a completely different outcome. This pertains specifically to my competitive audit, which revealed the failing trait of many competitive platforms to simply be proximity between profile and projection (sharing of activity).",
+                            "header": "User attention and preference are threshold-based."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Mattias Lambert",
+            "date": "2023",
+            "skills": "HTML, CSS, javascript, react",
+            "url": "https://www.mattiaslambert.com/",
+            "thumbnail": "assets/thumbnails/mattias.png",
+            "tags": ["frontend"],
+            "external": true,
+
+            "desc": "  Designed and developed game dev portfolio.",
+            "sections": [
+                {
+                    "title": "Stream Slow",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "For this project, I researched and implemented a design approach that would mitigate the pitfalls of the modern streaming model. ",
+                            "header": ""
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/thumbnails/daylight.png",
+                            "caption": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Framing The Problem",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "The abundance of options and ease of access fail to challenge user’s tastes, causing decision paralysis and close mindedness. ",
+                            "header": "An embarrassment of riches"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users should have the option to put their account on slow- where they can tune into the live activity of the users they follow, but are limited in their ability to select and skip songs.",
+                            "header": "Community-based music discovery."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Users have become increasingly intolerant of that which isn’t precisely what they want to hear at the time:",
+                            "header": "Abundance of choice in streaming causes decision paralysis."
+                        },
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "...65% of respondents only listen to music they know. On a more positive note, 60% of respondents wanted to discover new music. But their quest was lost to apathy or “being too busy and feeling overwhelmed by the amount of choice available” (the two most common blockers recorded by survey respondents). Deezer calls the phenomenon outlined by their survey results as ’musical paralysis",
+                            "source": "sound of life, 2022 ",
+                            "url": "https://www.soundoflife.com/blogs/mixtape/discover-new-music-musical-paralysis"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": " Music taste is one of the few things that don’t necessarily benefit from uniformity. Algorithmic reccomendation systems on their own fail because they by nature predict what users would like based on what they already like.",
+                            "header": "Algorithmic reccomendation systems have serious limitations."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/big_boi.png", "assets/hozier.png"],
+                            "caption": "group nodes"
+                        }
+                    ]
+                },
+
+                {
+                    "title": "Market Research and Analysis",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Social media platforms for all manner of media consumption (movies, books, and retail) are more popular than ever. However, many music streaming social media platforms have come and gone. For the most part these platforms failed due to licensing issues. ",
+                            "header": "Historically, music and social media don’t mix."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/cymbal.png",
+                                "assets/8trcks.png",
+                                "assets/lastfm.png"
+                            ],
+                            "caption": "left to right: 8tracks, cymbal, lastfm"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "In 2016, Instagram introduced the ‘stories’ feature, which was a way for users to provide live, temporary updates to their followers. This feature was pioneered by snapchat. Users eventually came to use instagram’s story feature more, despite the features being identical.",
+                            "header": "Proximity to the main platform matters."
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/sc.png", "assets/mo.png"],
+                            "caption": "left to right: snapchat and microsoft"
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Media consumption and curation platforms like goodreads, letterboxd, and pinterest are used not only for their main curatorial purposes, but with social interaction in mind",
+                            "header": "Using non-social media platforms as social media platforms"
+                        },
+                        {
+                            "nodeType": "ImageNode",
+                            "url": "assets/letterboxd.png",
+                            "caption": "The user above does not betray anything about their opinion on the film, but rather uses the review format to crack a joke in the way that one does on twitter."
+                        }
+                    ]
+                },
+                {
+                    "title": "User Types",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:"
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                " high curatorial use, low output",
+                                "low curatorial use, low output",
+                                "high curatorial use, high output",
+                                "low curatorial use, high output"
+                            ]
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/locur.png", "assets/hicur.png"],
+                            "caption": "left to right: low curatorial profile, high curatorial profile"
+                        }
+                    ]
+                },
+                {
+                    "title": "User Surveys",
+                    "body": [
+                        {
+                            "nodeType": "QuoteNode",
+                            "text": "I sometimes feel nervous to listen to a guilty pleasure song because i know there’s a chance that one of my friends will- and they have- catch me and call me out for it.",
+                            "source": "",
+                            "url": ""
+                        },
+                        {
+                            "nodeType": "BulletNode",
+                            "points": [
+                                "moderate to highly curatorial users check social activity the most",
+                                "moderate and non curatorial users claim to make playlists for themselves",
+                                "highly curatorial users visit their own playlists less than non curatorial users do",
+                                "only the curatorial users use desktop",
+                                "ll users, to some degree, use algorithimic features to listen to music"
+                            ],
+                            "header": "Main Insights"
+                        }
+                    ]
+                },
+                {
+                    "title": "Design Decisions + Final Screens",
+                    "body": [
+                        {
+                            "nodeType": "BulletNode",
+                            "header": "Principles",
+                            "points": [
+                                "Do not overwhelm the user",
+                                "The perfect amount of friction",
+                                "Users want to be seen",
+                                "Structurally aligned with the current streaming interface",
+                                "Modularity is key "
+                            ]
+                        },
+
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/sketch1.png",
+                                "assets/sketch2.png"
+                            ],
+                            "caption": ""
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/sketch3.png",
+                                "assets/sketch4.png"
+                            ],
+                            "caption": "sketches"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/wf1.png", "assets/wf2.png"],
+                            "caption": "wireframes"
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": ["assets/pt1.png", "assets/pt2.png"],
+                            "caption": "Prototypes"
+                        }
+                    ]
+                },
+                {
+                    "title": "Lessons Learned",
+                    "body": [
+                        {
+                            "nodeType": "TextNode",
+                            "body": "I first wanted to examine the current behavior of users on spotify. I did so by gathering information about 15 different profiles. I extracted 4 user types along 2 variables, controlling for  streaming usage:",
+                            "header": "Many important questions can’t be answered using direct questions."
+                        },
+                        {
+                            "nodeType": "TextNode",
+                            "body": "Preliminary research for this project revealed to me that even a quantitatively minute difference can lead to a completely different outcome. This pertains specifically to my competitive audit, which revealed the failing trait of many competitive platforms to simply be proximity between profile and projection (sharing of activity).",
+                            "header": "User attention and preference are threshold-based."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

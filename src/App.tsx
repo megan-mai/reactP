@@ -1,26 +1,54 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Spotify from "./pages/Spotify";
-import Test_JSON from "./test_project.json";
-import Project, { ProjectData } from "./pages/Project";
+import Home, { MobileHome } from "./pages/Home";
+import Test_JSON from "./projects.json";
+import Project, {
+    ProjectData,
+    MobileProject,
+    ProjectMed,
+} from "./pages/Project";
+import { useMediaQuery } from "@uidotdev/usehooks";
+import Projects from "./projects.json";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
+    const desktop = useMediaQuery("only screen and (min-width : 550px)");
+    // const desktopmed = useMediaQuery("only screen and (min-width : 960px)");
 
-                <Route path="/Spotify" element={<Spotify />} />
+    const projects = Projects.projects as ProjectData[];
 
-                <Route
-                    path="/Chess"
-                    element={
-                        <Project data={Test_JSON as unknown as ProjectData} />
-                    }
-                />
-            </Routes>
-        </BrowserRouter>
-    );
+    if (desktop) {
+        return (
+            //DESKTOP
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home projects={projects} />} />
+                    {projects.map((project) => (
+                        <Route
+                            path={project.url}
+                            element={<Project data={project} />}
+                        />
+                    ))}
+                </Routes>
+            </BrowserRouter>
+        );
+    } else {
+        return (
+            //MOBILE
+            <BrowserRouter>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<MobileHome projects={projects} />}
+                    />
+                    {projects.map((project) => (
+                        <Route
+                            path={project.url}
+                            element={<MobileProject data={project} />}
+                        />
+                    ))}
+                </Routes>
+            </BrowserRouter>
+        );
+    }
 }
 
 export default App;

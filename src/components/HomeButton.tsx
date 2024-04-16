@@ -2,20 +2,43 @@ import { useNavigate } from "react-router-dom";
 
 interface HomeButtonProps {
     url: string;
+    title: string;
 }
 
+//DESKTOP
 const HomeButton = (props: HomeButtonProps) => {
     const navigate = useNavigate();
 
     return (
-        <div className="bg-black bg-opacity-0 hover:bg-opacity-5 hover:cursor-pointer rounded-[.2em] hover:animate-fade">
+        <div className="w-fit bg-gray-200 text-sm hover:opacity-70 hover:cursor-pointer rounded-[.1em] hover:animate-fade mr-[.75em]">
             <a
-                className="flex py-[.5rem] px-[.8em] justify-between"
+                className="flex px-[8px] py-[2px] justify-between"
                 onClick={() => navigate(props.url)}
                 id="profile"
             >
-                <div className=""> ← </div>
-                <p>back</p>
+                <p>{props.title}</p>
+            </a>
+        </div>
+    );
+};
+
+//MOBILE
+interface HomeButtonMobileProps {
+    url: string;
+}
+
+export const HomeButtonMobile = (props: HomeButtonMobileProps) => {
+    const navigate = useNavigate();
+
+    return (
+        <div className="my-[2em] bg-white bg-opacity-1 z-1">
+            <a
+                className="flex"
+                onClick={() => navigate(props.url)}
+                id="profile"
+            >
+                <span className="translate-y-[3px]"> ↩ </span>
+                <div className=""> &nbsp;back </div>
             </a>
         </div>
     );

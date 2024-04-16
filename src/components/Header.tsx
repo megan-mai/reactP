@@ -1,16 +1,18 @@
 const Header = () => {
     return (
         <div>
-            <header className="leading-[1.3rem]">
-                At the intersection of brand awareness, technical understanding,
-                and visual reductiveness, useful software is built and
-                maintained.
-                <br></br>
-                Crafting thoughtful interfaces takes time, and it is only
-                through slow design that we are able to refine, polish,
-                engineer, and successfully launch great products.
-                <br></br>
-                Read about me or inspect my work.
+            <header className="leading-[1.3rem] mb-[1.5rem]">
+                I'm a Brooklyn-based product designer exploring the relationship
+                between optimization and innovation. When I'm not designing, I
+                spend my time coding, painting, and teaching piano. Previously
+                at{" "}
+                <a
+                    className="underline hover:no-underline"
+                    href="https://nation.io/"
+                >
+                    NATION
+                </a>
+                .
             </header>
         </div>
     );

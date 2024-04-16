@@ -1,14 +1,11 @@
-@tailwind base; 
-@tailwind components; 
-@tailwind utilities; 
-  
-  
-@font-face { 
-    font-family: "montreal"; 
-    src: url("assets/PPNeueMontreal-Book.otf"); 
-} 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face { 
-    font-family: "light"; 
-    src: url("assets/PPNeueMontreal-Thin.otf"); 
-} 
+@font-face {
+    font-family: "light";
+    src: url("assets/PPNeueMontreal-Thin.otf");
+
+    font-family: "fig";
+    src: url("/assets/Figtree-VariableFont_wght.ttf");
+}
