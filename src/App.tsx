@@ -8,6 +8,7 @@ import Project, {
 } from "./pages/Project";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import Projects from "./projects.json";
+import About from "./pages/About";
 
 function App() {
     const desktop = useMediaQuery("only screen and (min-width : 550px)");
@@ -45,6 +46,7 @@ function App() {
                             element={<MobileProject data={project} />}
                         />
                     ))}
+                    <Route path="/About" element={<About></About>}></Route>
                 </Routes>
             </BrowserRouter>
         );

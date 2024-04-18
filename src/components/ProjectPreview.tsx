@@ -81,13 +81,17 @@ export const ProjectPreviewMobile = ({
     external,
 }: ProjectPreviewMobileProps) => {
     const navigate = useNavigate();
-    const active = "hover:cursor-pointer block pb-[2em]";
+    const active = "hover:cursor-pointer block pb-[2.5em]";
     const inactive = "hidden";
 
     if (external) {
         return (
             <a className={active} href={url} target="_blank">
-                <div className="flex justify-between pb-[.5rem]">
+                <img
+                    className="hover:opacity-80 transition duration-400 rounded-lg"
+                    src={thumbnail}
+                ></img>
+                <div className="flex justify-between  pt-[.5rem] ">
                     <p>
                         {title} · {date}
                     </p>
@@ -96,19 +100,18 @@ export const ProjectPreviewMobile = ({
                     </div>
                 </div>
 
-                <img
-                    className="hover:opacity-80 transition duration-400 rounded-md"
-                    src={thumbnail}
-                ></img>
-
-                <div className="pt-[.6rem]">{desc}</div>
+                {/* <div className="pt-[.5rem]">{desc}</div> */}
             </a>
         );
     }
 
     return (
         <div className={active} onClick={() => navigate(url)}>
-            <div className="flex justify-between  pt-[1rem] pb-[.5rem]">
+            <img
+                className="hover:opacity-80 transition duration-400 rounded-lg"
+                src={thumbnail}
+            ></img>
+            <div className="flex justify-between  pt-[.5rem] ">
                 <p>
                     {title} · {date}
                 </p>
@@ -117,12 +120,7 @@ export const ProjectPreviewMobile = ({
                 </div>
             </div>
 
-            <img
-                className="hover:opacity-80 transition duration-400 rounded-md"
-                src={thumbnail}
-            ></img>
-
-            <div className="pt-[.5rem]">{desc}</div>
+            {/* <div className="pt-[.5rem]">{desc}</div> */}
         </div>
     );
 };

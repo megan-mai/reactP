@@ -109,50 +109,48 @@ const Sidebar = ({ setFilter, filter }: SidebarProps) => {
     );
 };
 
+interface SidebarMobileProps {
+    state: string;
+}
+
 /*MOBILE SIDEBAR*/
-export const SidebarMobile = ({
-    setFilter,
-    filter,
-    toggleNav,
-    setToggleNav,
-}: SidebarProps) => {
+export const SidebarMobile = ({ state }: SidebarMobileProps) => {
+    const active =
+        "py-[5px] px-[12px] hover:cursor-pointer bg-opacity-25 hover:opacity-100 text-white bg-black rounded-[10px] ";
+    const inactive =
+        "py-[5px] px-[12px] hover:cursor-pointer bg-opacity-40 hover:opacity-100 rounded-[10px]";
+
     return (
-        <div className="pb-[.4em] h-fit bg-white fixed bottom-0 left-0 right-0 whitespace-nowrap">
-            <hr className=""></hr>
-            <SidebarButtonMobile
-                title=""
-                details={toggleNav === "open" ? "close" : "menu"}
-                filter={filter}
-                toggleNav={toggleNav}
-                setToggleNav={setToggleNav}
-            />
-            <div
-                className={
-                    toggleNav === "open"
-                        ? "h-[9rem] transition-all duration-400"
-                        : "h-[0px] overflow-hidden  transition-all duration-400"
-                }
-            >
-                <hr></hr>
+        <div
+            className="text-[13px] font-fig p-[5px] bg-opacity-70 h-fit bg-gray-200 w-fit backdrop-blur-sm
 
-                <hr></hr>
-
-                <a className="p-[1em] opacity-50 flex justify-between hover:cursor-pointer hover:opacity-100">
-                    <div>Contact</div>
-                    <div>4 links</div>
+        fixed bottom-[1em] left-[50%] rounded-[14px] translate-x-[-50%]"
+        >
+            <div className="flex justify-between">
+                <a href="/" className={state == "projects" ? active : inactive}>
+                    <div>Projects</div>
                 </a>
-                <hr></hr>
 
-                <a className="p-[1em] opacity-50 flex justify-between hover:cursor-pointer hover:opacity-100">
+                <a
+                    href="/About"
+                    className={state == "info" ? active : inactive}
+                >
+                    <div>Information</div>
+                </a>
+
+                {/* <a
+                    href="https://docs.google.com/document/d/1FLpLOPq7g4eu0HbdCM-trpSZC9nh1pJlO034iSd6thI/edit"
+                    className="py-[5px] px-[12px] hover:cursor-pointer bg-opacity-40 hover:opacity-100 rounded-[10px]"
+                >
                     <div>Resume</div>
-                    <div>1 file</div>
                 </a>
-                <hr></hr>
 
-                <a className="p-[1em] opacity-50 flex justify-between hover:cursor-pointer hover:opacity-100">
+                <a
+                    href="https://docs.google.com/document/d/1FLpLOPq7g4eu0HbdCM-trpSZC9nh1pJlO034iSd6thI/edit"
+                    className="py-[5px] px-[12px] hover:cursor-pointer bg-opacity-40 hover:opacity-100 rounded-[10px]"
+                >
                     <div>About</div>
-                    <div>:3</div>
-                </a>
+                </a> */}
             </div>
         </div>
     );

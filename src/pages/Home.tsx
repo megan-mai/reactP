@@ -140,21 +140,18 @@ export const MobileHome = ({ projects }: HomeProps) => {
     return (
         <div className="App text-sm font-fig">
             {/* CONTAINER */}
-            <div id="container" className=" mx-[1rem]">
-                <SidebarMobile
-                    setFilter={setFilter}
-                    filter={filter}
-                    //open or closed?
-                    toggleNav={toggleNav}
-                    setToggleNav={setToggleNav}
-                />
+            <div id="container" className=" mx-[.75rem]">
+                <SidebarMobile state="projects" />
 
                 <div id="main" className=" w-full mt-[1em] mb-[4em]">
-                    <div className="pt-[.4em] pb-[1em]" id="profile">
-                        <div>Megan Mai</div>
-                        <div>UX design, etc.</div>
+                    <div
+                        className="pb-[12em] flex justify-between"
+                        id="profile"
+                    >
+                        <div>Megan Mai </div>
+                        <div className="opacity-50">Product Design</div>
                     </div>
-                    <Header></Header>
+                    {/* <Header></Header> */}
                     {projects
                         .filter(
                             (project) =>
