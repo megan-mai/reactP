@@ -82,12 +82,6 @@ const Home = ({ projects }: HomeProps) => {
                             >
                                 LinkedIn
                             </a>
-                            <a
-                                className="opacity-40 hover:opacity-100"
-                                href="https://docs.google.com/document/d/1FLpLOPq7g4eu0HbdCM-trpSZC9nh1pJlO034iSd6thI/edit"
-                            >
-                                Resume
-                            </a>
                         </div>
                     </div>
                 </div>

@@ -75,13 +75,6 @@ const Sidebar = ({ setFilter, filter }: SidebarProps) => {
                 setOpen={setOpen}
             />
 
-            <a
-                href="https://docs.google.com/document/d/1FLpLOPq7g4eu0HbdCM-trpSZC9nh1pJlO034iSd6thI/edit"
-                className="py-[.2em] opacity-40 flex justify-between hover:cursor-pointer hover:opacity-100"
-            >
-                <div>Resume</div>
-                <div>1</div>
-            </a>
             <div className="border-t-[.5px] my-[.5rem] opacity-50"></div>
 
             <div className="flex   pt-[.2em]">

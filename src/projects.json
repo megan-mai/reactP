@@ -1078,12 +1078,12 @@
             "title": "Mattias Lambert",
             "date": "2023",
             "skills": "HTML, CSS, javascript, react",
-            "url": "https://www.mattiaslambert.com/",
+            "url": "https://www.mattias-lambert.com/",
             "thumbnail": "assets/thumbnails/mattias.png",
             "tags": ["frontend"],
             "external": true,
 
-            "desc": "  Designed and developed game dev portfolio.",
+            "desc": "  Designed and developed developer portfolio.",
             "sections": [
                 {
                     "title": "Stream Slow",

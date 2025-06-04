@@ -37,13 +37,6 @@ const About = () => {
                 >
                     LinkedIn
                 </a>
-                <br></br>
-                <a
-                    className="underline"
-                    href="https://docs.google.com/document/d/1FLpLOPq7g4eu0HbdCM-trpSZC9nh1pJlO034iSd6thI/edit"
-                >
-                    Resume
-                </a>{" "}
             </div>
             <div className="opacity-50 mb-[.5em]">Skills</div>
             <div className="mb-[1.5em]">
