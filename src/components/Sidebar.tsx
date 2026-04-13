@@ -48,7 +48,7 @@ const Sidebar = ({ projects }: SidebarProps) => {
     };
 
     return (
-        <div className=" w-[15%] min-w-[230px] mr-[5em] ml-[2em] fixed top-1/2 -translate-y-1/2 antialiased translate-x-[-216px]">
+        <div className=" w-[15%] min-w-[230px] max-w-[230px] mr-[5em] ml-[2em] fixed top-1/2 -translate-y-1/2 antialiased translate-x-[-216px]">
             <div
                 className="hover:cursor-pointer rounded-[.2em] hover:animate-fade "
                 id="profile"
