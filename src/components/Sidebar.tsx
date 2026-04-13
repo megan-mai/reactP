@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ProjectData } from "../pages/Project";
 
 interface SidebarProps {
@@ -8,6 +8,8 @@ interface SidebarProps {
 /*DESKTOP SIDEBAR*/
 const Sidebar = ({ projects }: SidebarProps) => {
     const [activeIndex, setActiveIndex] = useState(-1);
+    const [clickedIndex, setClickedIndex] = useState<number | null>(null);
+    const ignoreScrollUntilRef = useRef<number>(0);
 
     useEffect(() => {
         const observers: IntersectionObserver[] = [];
@@ -29,6 +31,19 @@ const Sidebar = ({ projects }: SidebarProps) => {
         return () => observers.forEach((o) => o.disconnect());
     }, [projects]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (Date.now() < ignoreScrollUntilRef.current) return;
+            setClickedIndex(null);
+            const atTop = window.scrollY <= 10;
+            const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10;
+            if (atTop) setActiveIndex(0);
+            else if (atBottom) setActiveIndex(projects.length - 1);
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [projects.length]);
+
     const numberColors = [
         "#d946ef", // magenta
         "#14b8a6", // teal
@@ -45,6 +60,12 @@ const Sidebar = ({ projects }: SidebarProps) => {
         if (el) {
             el.scrollIntoView({ behavior: "smooth", block: "center" });
         }
+    };
+
+    const handleItemClick = (index: number) => {
+        setClickedIndex(index);
+        ignoreScrollUntilRef.current = Date.now() + 1200;
+        scrollTo(`project-${index}`);
     };
 
     return (
@@ -74,8 +95,8 @@ const Sidebar = ({ projects }: SidebarProps) => {
             {projects.map((project, index) => (
                 <div
                     key={project.title}
-                    onClick={() => scrollTo(`project-${index}`)}
-                    className={`py-[.1rem] leading-[1.2rem] hover:opacity-100 hover:cursor-pointer text-sm whitespace-normal ${activeIndex === index ? "opacity-100" : "opacity-40"}`}
+                    onClick={() => handleItemClick(index)}
+                    className={`py-[.1rem] leading-[1.2rem] hover:opacity-100 hover:cursor-pointer text-sm whitespace-normal ${(clickedIndex ?? activeIndex) === index ? "opacity-100" : "opacity-40"}`}
                 >
                     <span><span style={{ color: numberColors[index % numberColors.length] }}>{String(index + 1).padStart(2, "0")}</span>&nbsp;&nbsp;{project.title}</span>
                 </div>

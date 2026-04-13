@@ -20,7 +20,7 @@ const ProjectPreview = ({
     id,
 }: ProjectPreviewProps) => {
     const navigate = useNavigate();
-    const active = "mb-[1.75em] group hover:cursor-pointer block";
+    const active = "mb-[1.25em] group hover:cursor-pointer block";
 
     if (external) {
         return (

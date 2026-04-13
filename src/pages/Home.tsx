@@ -55,6 +55,7 @@ const Home = ({ projects }: HomeProps) => {
                                 />
                             ))}
                         <div className="opacity-40 text-sm pb-[1em]">Website designed and developed by me, 2026</div>
+                        <div className="pb-[3em]"></div>
                     </div>
                 </div>
             </div>
@@ -85,6 +86,7 @@ const Home = ({ projects }: HomeProps) => {
                                 />
                             ))}
                         <div className="opacity-40 text-sm pb-[1em]">Website designed and developed by me, 2026</div>
+                        <div className="pb-[3em]"></div>
                     </div>
                 </div>
             </div>
