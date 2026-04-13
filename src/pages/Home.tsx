@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
+import { useEffect, useState } from "react";
 import ProjectPreview, {
     ProjectPreviewMobile,
 } from "../components/ProjectPreview";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import Header from "../components/Header";
 import Sidebar, { SidebarMobile } from "../components/Sidebar";
-import {
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
-} from "@material-tailwind/react";
 import { ProjectData } from "./Project";
 
 interface HomeProps {
@@ -128,8 +122,7 @@ const Home = ({ projects }: HomeProps) => {
 /* 
 // MOBILE */
 export const MobileHome = ({ projects }: HomeProps) => {
-    const [filter, setFilter] = useState("");
-    const [toggleNav, setToggleNav] = useState("closed");
+    const [filter] = useState("");
 
     return (
         <div className="App text-sm font-fig">

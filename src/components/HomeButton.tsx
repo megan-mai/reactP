@@ -11,13 +11,13 @@ const HomeButton = (props: HomeButtonProps) => {
 
     return (
         <div className="w-fit bg-gray-200 text-sm hover:opacity-70 hover:cursor-pointer rounded-[.1em] hover:animate-fade mr-[.75em]">
-            <a
+            <button
                 className="flex px-[8px] py-[2px] justify-between"
                 onClick={() => navigate(props.url)}
                 id="profile"
             >
                 <p>{props.title}</p>
-            </a>
+            </button>
         </div>
     );
 };
@@ -32,14 +32,14 @@ export const HomeButtonMobile = (props: HomeButtonMobileProps) => {
 
     return (
         <div className="my-[2em] bg-white bg-opacity-1 z-1">
-            <a
+            <button
                 className="flex"
                 onClick={() => navigate(props.url)}
                 id="profile"
             >
                 <span className="translate-y-[3px]"> ↩ </span>
                 <div className=""> &nbsp;back </div>
-            </a>
+            </button>
         </div>
     );
 };

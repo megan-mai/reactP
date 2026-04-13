@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
 import ProjectNavButton, { ProjectNavButtonMobile } from "./ProjectNavButton";
-import HomeButton, { HomeButtonMobile } from "./HomeButton";
-import Home from "../pages/Home";
+import HomeButton from "./HomeButton";
 
 interface ProjectNavProps {
     titles: string[];
@@ -23,9 +21,9 @@ const ProjectNav = ({
         <div className="h-full ml-[1em] fixed top-1/2 font-fig translate-x-[-280px] translate-y-[-35%]">
             <div className="flex min-w-[14em]">
                 <HomeButton url="/" title="Back" />
-                <a className=" hover:opacity-70 px-[8px] py-[2px] w-fit bg-gray-200 text-sm hover:cursor-pointer rounded-[.1em] hover:animate-fade mr-[.75em]">
+                <button className=" hover:opacity-70 px-[8px] py-[2px] w-fit bg-gray-200 text-sm hover:cursor-pointer rounded-[.1em] hover:animate-fade mr-[.75em]">
                     Visit <span className="text-[.75em] ml-[.5em]">↗</span>
-                </a>
+                </button>
             </div>
 
             <hr className="dotted mb-[.5rem] mt-[.8rem]"></hr>

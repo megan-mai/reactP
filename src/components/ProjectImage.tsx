@@ -9,7 +9,7 @@ interface ProjectImageProps {
 const ProjectImage = (props: ProjectImageProps) => {
     return (
         <div className={` m-auto w-[${props.size}%]`}>
-            <img className="mt-[2em] border-[1px]" src={props.url}></img>
+            <img className="mt-[2em] border-[1px]" src={props.url} alt={props.caption}></img>
             <p className="text-gray-500 text-sm pt-[.4em] pb-[2em]">
                 {props.caption}
             </p>
@@ -34,7 +34,7 @@ export const ImageGroup = (props: ProjectImageGroupProps) => {
                     //     caption={props.captions ? props.captions[index] : ""}
                     // />
                     <div className={`w-[${props.size}%] m-auto`}>
-                        <img className="border-[1px]" src={image}></img>
+                        <img className="border-[1px]" src={image} alt={props.captions ? props.captions[index] : ""}></img>
                         <p className="pt-[.5em] text-gray-500 text-sm">
                             {props.captions ? props.captions[index] : ""}
                         </p>

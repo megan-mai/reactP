@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState, useEffect, useRef } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 interface SidebarProps {
     title: string;
@@ -29,7 +29,7 @@ const SidebarButton = ({
             onClick={() => setFilter(id)}
             className={filter === id ? clickedStyle : unclickedStyle}
         >
-            <a>{title}</a>
+            <span>{title}</span>
 
             <div>{details}</div>
         </div>
@@ -67,20 +67,20 @@ export const ContactButton = ({
                 onClick={() => handleOpen(open)}
                 className={open === 1 ? clickedStyle : unclickedStyle}
             >
-                <a>{title}</a>
+                <span>{title}</span>
                 <div>2</div>
             </div>
 
             {/* accordion body */}
             <div className={open === 1 ? "h-auto" : "overflow-hidden h-[0px]"}>
-                <a className=" pl-[1em] py-[.3em] opacity-40 flex justify-between hover:cursor-pointer hover:opacity-100">
+                <div className=" pl-[1em] py-[.3em] opacity-40 flex justify-between hover:cursor-pointer hover:opacity-100">
                     <a href="https://www.linkedin.com/in/meganmai99/">
                         LinkedIn
                     </a>
-                </a>
-                <a className=" pl-[1em] py-[.3em] opacity-40 flex justify-between hover:cursor-pointer hover:opacity-100">
+                </div>
+                <div className=" pl-[1em] py-[.3em] opacity-40 flex justify-between hover:cursor-pointer hover:opacity-100">
                     <a href="mailto:mpmai99@g.ucla.edu">Email</a>
-                </a>
+                </div>
                 {/* <a className=" pl-[1em] py-[.3em] opacity-40 flex justify-between hover:cursor-pointer hover:opacity-100">
                     <a href="https://www.linkedin.com/in/meganmai99/">
                         read.cv
@@ -113,7 +113,7 @@ export const SidebarButtonMobile = ({
             onClick={() => onSidebarClick()}
             className="p-[1em] flex justify-between opacity-50 active:opacity-100 text-sm transition duration-400"
         >
-            <a>{title}</a>
+            <span>{title}</span>
 
             <div>{details}</div>
         </div>

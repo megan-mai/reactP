@@ -1,14 +1,5 @@
-import HomeButton from "./HomeButton";
-import SidebarButton, {
-    SidebarButtonMobile,
-    ContactButton,
-} from "./SidebarButton";
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
-import {
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
-} from "@material-tailwind/react";
+import SidebarButton from "./SidebarButton";
+import { Dispatch, SetStateAction } from "react";
 
 interface SidebarProps {
     setFilter: Dispatch<SetStateAction<string>>;
@@ -20,8 +11,6 @@ interface SidebarProps {
 
 /*DESKTOP SIDEBAR*/
 const Sidebar = ({ setFilter, filter }: SidebarProps) => {
-    const [open, setOpen] = useState(0); //default closed
-
     return (
         <div className=" w-[15%] min-w-[200px] h-full pt-[1.25rem] mr-[4em] ml-[2em] fixed top-1/2 whitespace-nowrap antialiased translate-x-[-280px] translate-y-[-35%]">
             <div
@@ -124,13 +113,13 @@ export const SidebarMobile = ({ state }: SidebarMobileProps) => {
         fixed bottom-[1em] left-[50%] rounded-[14px] translate-x-[-50%]"
         >
             <div className="flex justify-between">
-                <a href="/" className={state == "projects" ? active : inactive}>
+                <a href="/" className={state === "projects" ? active : inactive}>
                     <div>Projects</div>
                 </a>
 
                 <a
                     href="/About"
-                    className={state == "info" ? active : inactive}
+                    className={state === "info" ? active : inactive}
                 >
                     <div>Information</div>
                 </a>

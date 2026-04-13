@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import testImage from "../test.png";
 
 interface ProjectPreviewProps {
     thumbnail: string;
@@ -23,10 +22,11 @@ const ProjectPreview = ({
 
     if (external) {
         return (
-            <a className={active} href={url} target="_blank">
+            <a className={active} href={url} target="_blank" rel="noreferrer">
                 <img
                     className="hover:opacity-80 transition duration-400 rounded-md"
                     src={thumbnail}
+                    alt={title}
                 ></img>
                 <div className="opacity-50 flex pt-[.5rem]">
                     <p>
@@ -47,6 +47,7 @@ const ProjectPreview = ({
             <img
                 className="hover:opacity-80 transition duration-400 rounded-md"
                 src={thumbnail}
+                alt={title}
             ></img>
             <div className="opacity-50 flex pt-[.5rem]">
                 <p>
@@ -82,14 +83,13 @@ export const ProjectPreviewMobile = ({
 }: ProjectPreviewMobileProps) => {
     const navigate = useNavigate();
     const active = "hover:cursor-pointer block pb-[2.5em]";
-    const inactive = "hidden";
-
     if (external) {
         return (
-            <a className={active} href={url} target="_blank">
+            <a className={active} href={url} target="_blank" rel="noreferrer">
                 <img
                     className="hover:opacity-80 transition duration-400 rounded-lg"
                     src={thumbnail}
+                    alt={title}
                 ></img>
                 <div className="flex justify-between  pt-[.5rem] ">
                     <p>
@@ -110,6 +110,7 @@ export const ProjectPreviewMobile = ({
             <img
                 className="hover:opacity-80 transition duration-400 rounded-lg"
                 src={thumbnail}
+                alt={title}
             ></img>
             <div className="flex justify-between  pt-[.5rem] ">
                 <p>

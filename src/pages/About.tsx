@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import { SidebarMobile } from "../components/Sidebar";
 
 const About = () => {

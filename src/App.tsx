@@ -1,10 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home, { MobileHome } from "./pages/Home";
-import Test_JSON from "./projects.json";
 import Project, {
     ProjectData,
     MobileProject,
-    ProjectMed,
 } from "./pages/Project";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import Projects from "./projects.json";

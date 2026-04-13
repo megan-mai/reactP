@@ -1,4 +1,3 @@
-import test_project_data from "../projects.json";
 import Text, { Bullet, TextRef } from "../components/Text";
 import { useEffect, useState } from "react";
 import ProjectImage, { ImageGroup } from "../components/ProjectImage";
@@ -6,7 +5,7 @@ import Quote from "../components/Quote";
 import ProjectNav, { ProjectNavMobile } from "../components/ProjectNav";
 import SectionTitle, { SectionTitleMobile } from "../components/SectionTitle";
 import ProjectHeader from "../components/ProjectHeader";
-import HomeButton, { HomeButtonMobile } from "../components/HomeButton";
+import { HomeButtonMobile } from "../components/HomeButton";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
 export interface ProjectData {
@@ -42,7 +41,6 @@ const Project = ({ data }: ProjectProps) => {
     const title = data.title;
     const date = data.date;
     const visit = data.visit;
-    const url = data.url;
     const thumbnail = data.thumbnail;
     const skills = data.skills;
     const headerdesc = data.headerdesc;
