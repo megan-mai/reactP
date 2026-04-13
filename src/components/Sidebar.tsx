@@ -55,10 +55,9 @@ const Sidebar = ({ projects }: SidebarProps) => {
             >
                 <img className="w-[140px] h-[140px] rounded-full mb-[.1rem] object-cover scale-110" src="assets/thumbnails/marker_lines_2dots_transparent.png" alt="Profile" />
                 <div>Megan Mai</div>
-                <div className="italic">Design + Strategy</div>
-                <div className="opacity-60 leading-[1.3rem] mt-[.4rem] max-w-[230px] whitespace-normal" style={{ textWrap: "balance" }}>
-                   Design Engineer interested in designing for utility (tool interfaces) and social networks.
-Previously
+                <div className="italic">Design Engineer</div>
+                <div className="opacity-60 leading-[1.3rem] mt-[rem] max-w-[230px] whitespace-normal" style={{ textWrap: "balance" }}>
+                    Previously
                     at{" "}
                     <a
                         className="underline hover:no-underline"
