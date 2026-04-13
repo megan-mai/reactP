@@ -23,16 +23,29 @@ const Sidebar = ({ setFilter, filter }: SidebarProps) => {
     const [open, setOpen] = useState(0); //default closed
 
     return (
-        <div className=" w-[15%] min-w-[200px] h-full pt-[1.25rem] mr-[4em] ml-[2em] fixed top-0 whitespace-nowrap antialiased translate-x-[-344px] translate-y-[120px]">
+        <div className=" w-[15%] min-w-[200px] h-full pt-[1.25rem] mr-[4em] ml-[2em] fixed top-1/2 whitespace-nowrap antialiased translate-x-[-280px] translate-y-[-35%]">
             <div
                 className="hover:cursor-pointer rounded-[.2em] hover:animate-fade  pt-[4em] "
                 id="profile"
             >
                 <div>Megan Mai</div>
                 <div className="">UX + UI Designer</div>
+                <div className="opacity-60 leading-[1.3rem] mt-[.4rem] max-w-[200px] whitespace-normal">
+                    I'm a Brooklyn-based product designer exploring the relationship
+                    between optimization and innovation. When I'm not designing, I
+                    spend my time coding, painting, and teaching piano. Previously
+                    at{" "}
+                    <a
+                        className="underline hover:no-underline"
+                        href="https://nation.io/"
+                    >
+                        NATION
+                    </a>
+                    .
+                </div>
             </div>
 
-            <div className="border-t-[.5px] my-[.5rem] opacity-50"></div>
+            <div className="border-t-[.5px] my-[.5rem] opacity-100"></div>
 
             <SidebarButton
                 title="All Projects"
@@ -66,16 +79,7 @@ const Sidebar = ({ setFilter, filter }: SidebarProps) => {
                 filter={filter}
             />
 
-            <div className="border-t-[.5px] my-[.5rem] opacity-50"></div>
-
-            <ContactButton
-                title="About"
-                details="2"
-                open={open}
-                setOpen={setOpen}
-            />
-
-            <div className="border-t-[.5px] my-[.5rem] opacity-50"></div>
+            <div className="border-t-[.5px] my-[.5rem] opacity-100"></div>
 
             <div className="flex   pt-[.2em]">
                 <a

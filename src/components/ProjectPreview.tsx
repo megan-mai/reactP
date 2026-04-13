@@ -19,7 +19,7 @@ const ProjectPreview = ({
     external,
 }: ProjectPreviewProps) => {
     const navigate = useNavigate();
-    const active = "mb-[4em] group hover:cursor-pointer block";
+    const active = "mb-[1.75em] group hover:cursor-pointer block";
 
     if (external) {
         return (
@@ -28,7 +28,7 @@ const ProjectPreview = ({
                     className="hover:opacity-80 transition duration-400 rounded-md"
                     src={thumbnail}
                 ></img>
-                <div className="opacity-50 flex pt-[.975rem]">
+                <div className="opacity-50 flex pt-[.5rem]">
                     <p>
                         {title} · {date}
                     </p>
@@ -48,7 +48,7 @@ const ProjectPreview = ({
                 className="hover:opacity-80 transition duration-400 rounded-md"
                 src={thumbnail}
             ></img>
-            <div className="opacity-50 flex pt-[.975rem]">
+            <div className="opacity-50 flex pt-[.5rem]">
                 <p>
                     {title} · {date}
                 </p>

@@ -20,7 +20,7 @@ const ProjectNav = ({
     url,
 }: ProjectNavProps) => {
     return (
-        <div className="h-full ml-[1em] fixed top-0 font-fig translate-x-[-300px] translate-y-[200px]">
+        <div className="h-full ml-[1em] fixed top-1/2 font-fig translate-x-[-280px] translate-y-[-35%]">
             <div className="flex min-w-[14em]">
                 <HomeButton url="/" title="Back" />
                 <a className=" hover:opacity-70 px-[8px] py-[2px] w-fit bg-gray-200 text-sm hover:cursor-pointer rounded-[.1em] hover:animate-fade mr-[.75em]">

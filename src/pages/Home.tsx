@@ -97,7 +97,7 @@ const Home = ({ projects }: HomeProps) => {
                 >
                     <Sidebar setFilter={setFilter} filter={filter} />
 
-                    <div id="main" className=" py-[6rem]  min-w-[400px]">
+                    <div id="main" className="pt-[12px] min-w-[400px]">
                         <Header></Header>
 
                         {projects

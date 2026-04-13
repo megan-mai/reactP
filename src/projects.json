@@ -1,6 +1,40 @@
 {
     "projects": [
         {
+            "title": "earth.tv",
+            "date": "2025",
+            "skills": "figma",
+            "url": "/EarthTV",
+            "visit": "https://www.youtube.com/watch?v=HuH6rieVU1I&t=1488s",
+            "thumbnail": "assets/thumbnails/earthtvbanner.png",
+            "tags": ["Brand"],
+            "desc": "Brand identity and video layout design for Earth.tv, a world news digest feed.",
+            "headerdesc": "",
+            "sections": [
+                {
+                    "body": [
+                    
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/earthtv/Platform Logo.png",
+                                "assets/earthtv/Color guideline.png"
+                            ],
+                            "caption": ""
+                        },
+                        {
+                            "nodeType": "ImageGroupNode",
+                            "urls": [
+                                "assets/earthtv/Frame 53.png",
+                                "assets/earthtv/Group 58.png"
+                            ],
+                            "caption": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Stream Slow",
             "date": "September 2024",
             "skills": "figma, notion",
