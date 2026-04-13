@@ -1,28 +1,64 @@
-import SidebarButton from "./SidebarButton";
-import { Dispatch, SetStateAction } from "react";
+import { useEffect, useState } from "react";
+import { ProjectData } from "../pages/Project";
 
 interface SidebarProps {
-    setFilter: Dispatch<SetStateAction<string>>;
-    filter: string;
-    //closed or open?
-    toggleNav?: string;
-    setToggleNav?: Dispatch<SetStateAction<string>>;
+    projects: ProjectData[];
 }
 
 /*DESKTOP SIDEBAR*/
-const Sidebar = ({ setFilter, filter }: SidebarProps) => {
+const Sidebar = ({ projects }: SidebarProps) => {
+    const [activeIndex, setActiveIndex] = useState(-1);
+
+    useEffect(() => {
+        const observers: IntersectionObserver[] = [];
+        projects.forEach((_, index) => {
+            const el = document.getElementById(`project-${index}`);
+            if (el) {
+                const observer = new IntersectionObserver(
+                    ([entry]) => {
+                        if (entry.isIntersecting) {
+                            setActiveIndex(index);
+                        }
+                    },
+                    { rootMargin: "-40% 0px -40% 0px", threshold: 0 }
+                );
+                observer.observe(el);
+                observers.push(observer);
+            }
+        });
+        return () => observers.forEach((o) => o.disconnect());
+    }, [projects]);
+
+    const numberColors = [
+        "#d946ef", // magenta
+        "#14b8a6", // teal
+        "#f59e0b", // orange-yellow
+        "#d4d400", // neon yellow
+        "#92400e", // brown
+        "#6b7280", // grey
+        "#556b2f", // dark olive
+        "#a78bfa", // lavender
+    ];
+
+    const scrollTo = (id: string) => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    };
+
     return (
-        <div className=" w-[15%] min-w-[200px] h-full pt-[1.25rem] mr-[4em] ml-[2em] fixed top-1/2 whitespace-nowrap antialiased translate-x-[-280px] translate-y-[-35%]">
+        <div className=" w-[15%] min-w-[230px] mr-[5em] ml-[2em] fixed top-1/2 -translate-y-1/2 antialiased translate-x-[-216px]">
             <div
-                className="hover:cursor-pointer rounded-[.2em] hover:animate-fade  pt-[4em] "
+                className="hover:cursor-pointer rounded-[.2em] hover:animate-fade "
                 id="profile"
             >
+                <img className="w-[140px] h-[140px] rounded-full mb-[.1rem] object-cover scale-110" src="assets/thumbnails/marker_lines_2dots_transparent.png" alt="Profile" />
                 <div>Megan Mai</div>
-                <div className="">UX + UI Designer</div>
-                <div className="opacity-60 leading-[1.3rem] mt-[.4rem] max-w-[200px] whitespace-normal">
-                    I'm a Brooklyn-based product designer exploring the relationship
-                    between optimization and innovation. When I'm not designing, I
-                    spend my time coding, painting, and teaching piano. Previously
+                <div className="italic">Design + Strategy</div>
+                <div className="opacity-60 leading-[1.3rem] mt-[.4rem] max-w-[230px] whitespace-normal" style={{ textWrap: "balance" }}>
+                   Design Engineer interested in designing for utility (tool interfaces) and social networks.
+Previously
                     at{" "}
                     <a
                         className="underline hover:no-underline"
@@ -36,61 +72,26 @@ const Sidebar = ({ setFilter, filter }: SidebarProps) => {
 
             <div className="border-t-[.5px] my-[.5rem] opacity-100"></div>
 
-            <SidebarButton
-                title="All Projects"
-                details="6"
-                setFilter={setFilter}
-                id=""
-                filter={filter}
-            />
-
-            <SidebarButton
-                title="UX"
-                details="4"
-                setFilter={setFilter}
-                id="UX"
-                filter={filter}
-            />
-
-            <SidebarButton
-                title="Frontend"
-                details="1"
-                setFilter={setFilter}
-                id="frontend"
-                filter={filter}
-            />
-
-            <SidebarButton
-                title="Research"
-                details="1"
-                setFilter={setFilter}
-                id="research"
-                filter={filter}
-            />
+            {projects.map((project, index) => (
+                <div
+                    key={project.title}
+                    onClick={() => scrollTo(`project-${index}`)}
+                    className={`py-[.1rem] leading-[1.2rem] hover:opacity-100 hover:cursor-pointer text-sm whitespace-normal ${activeIndex === index ? "opacity-100" : "opacity-40"}`}
+                >
+                    <span><span style={{ color: numberColors[index % numberColors.length] }}>{String(index + 1).padStart(2, "0")}</span>&nbsp;&nbsp;{project.title}</span>
+                </div>
+            ))}
 
             <div className="border-t-[.5px] my-[.5rem] opacity-100"></div>
 
-            <div className="flex   pt-[.2em]">
+            <div className="pt-[.2em]">
                 <a
                     className="opacity-40 hover:opacity-100"
                     href="mailto:mpmai99@g.ucla.edu"
                 >
-                    Contact
-                </a>
-                <span className="opacity-40">∙</span>
-                <a
-                    className="opacity-40 hover:opacity-100"
-                    href="https://www.linkedin.com/in/meganmai99/"
-                >
-                    LinkedIn
+                    mpmai99@gmail.com <span className="text-[.75em]">↗</span>
                 </a>
             </div>
-
-            {/* 
-            <a className="py-[.2em] opacity-40 flex justify-between hover:cursor-pointer hover:opacity-100">
-                <div>About</div>
-                <div>:3</div>
-            </a> */}
         </div>
     );
 };
@@ -123,20 +124,6 @@ export const SidebarMobile = ({ state }: SidebarMobileProps) => {
                 >
                     <div>Information</div>
                 </a>
-
-                {/* <a
-                    href="https://docs.google.com/document/d/1FLpLOPq7g4eu0HbdCM-trpSZC9nh1pJlO034iSd6thI/edit"
-                    className="py-[5px] px-[12px] hover:cursor-pointer bg-opacity-40 hover:opacity-100 rounded-[10px]"
-                >
-                    <div>Resume</div>
-                </a>
-
-                <a
-                    href="https://docs.google.com/document/d/1FLpLOPq7g4eu0HbdCM-trpSZC9nh1pJlO034iSd6thI/edit"
-                    className="py-[5px] px-[12px] hover:cursor-pointer bg-opacity-40 hover:opacity-100 rounded-[10px]"
-                >
-                    <div>About</div>
-                </a> */}
             </div>
         </div>
     );

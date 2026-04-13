@@ -9,7 +9,7 @@ import Projects from "./projects.json";
 import About from "./pages/About";
 
 function App() {
-    const desktop = useMediaQuery("only screen and (min-width : 550px)");
+    const desktop = useMediaQuery("only screen and (min-width : 800px)");
     // const desktopmed = useMediaQuery("only screen and (min-width : 960px)");
 
     const projects = Projects.projects as ProjectData[];

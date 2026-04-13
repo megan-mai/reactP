@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ProjectPreview, {
     ProjectPreviewMobile,
 } from "../components/ProjectPreview";
@@ -18,10 +18,8 @@ const Home = ({ projects }: HomeProps) => {
         document.title = "Megan Mai";
     }, []);
 
-    const [filter, setFilter] = useState("");
-
     //MEDIUM SCREEN
-    if (useMediaQuery("only screen and (max-width : 1130px)")) {
+    if (useMediaQuery("only screen and (max-width : 800px)")) {
         return (
             <div className="App bg-grey text-sm font-fig">
                 {/* CONTAINER */}
@@ -29,7 +27,6 @@ const Home = ({ projects }: HomeProps) => {
                     id="container"
                     className=" mx-auto max-w-[1000px] px-[2em] w-[60%] min-w-[500px]"
                 >
-                    {/* <Sidebar setFilter={setFilter} filter={filter} /> */}
                     <div id="main" className=" pt-[6rem]  ">
                         <div className="pb-[2em] text-base">
                             {" "}
@@ -45,14 +42,10 @@ const Home = ({ projects }: HomeProps) => {
                         <p>Selected Work</p>
                         <br></br>
 
-                        {projects
-                            .filter(
-                                (project) =>
-                                    filter === "" ||
-                                    project.tags.includes(filter),
-                            )
-                            .map((project) => (
+                        {projects.map((project, index) => (
                                 <ProjectPreview
+                                    key={project.title}
+                                    id={`project-${index}`}
                                     thumbnail={project.thumbnail}
                                     title={project.title}
                                     date={project.date}
@@ -61,22 +54,7 @@ const Home = ({ projects }: HomeProps) => {
                                     external={project.external}
                                 />
                             ))}
-                    </div>
-                    <div className="flex justify-between text-base pb-[4em]">
-                        <a
-                            className="opacity-40 hover:opacity-100"
-                            href="mailto:mpmai99@g.ucla.edu"
-                        >
-                            mpmai99@g.ucla.edu
-                        </a>
-                        <div>
-                            <a
-                                className="opacity-40 hover:opacity-100 mr-[1em]"
-                                href="https://www.linkedin.com/in/meganmai99/"
-                            >
-                                LinkedIn
-                            </a>
-                        </div>
+                        <div className="opacity-40 text-sm pb-[1em]">Website designed and developed by me, 2026</div>
                     </div>
                 </div>
             </div>
@@ -89,19 +67,15 @@ const Home = ({ projects }: HomeProps) => {
                     id="container"
                     className=" mx-auto max-w-[1000px] px-[2em] w-[45%]"
                 >
-                    <Sidebar setFilter={setFilter} filter={filter} />
+                    <Sidebar projects={projects} />
 
-                    <div id="main" className="pt-[12px] min-w-[400px]">
+                    <div id="main" className="pt-[12px] min-w-[400px] ml-[4em]">
                         <Header></Header>
 
-                        {projects
-                            .filter(
-                                (project) =>
-                                    filter === "" ||
-                                    project.tags.includes(filter),
-                            )
-                            .map((project) => (
+                        {projects.map((project, index) => (
                                 <ProjectPreview
+                                    key={project.title}
+                                    id={`project-${index}`}
                                     thumbnail={project.thumbnail}
                                     title={project.title}
                                     date={project.date}
@@ -110,9 +84,8 @@ const Home = ({ projects }: HomeProps) => {
                                     external={project.external}
                                 />
                             ))}
+                        <div className="opacity-40 text-sm pb-[1em]">Website designed and developed by me, 2026</div>
                     </div>
-                    <br></br>
-                    <br></br>
                 </div>
             </div>
         );
@@ -122,8 +95,6 @@ const Home = ({ projects }: HomeProps) => {
 /* 
 // MOBILE */
 export const MobileHome = ({ projects }: HomeProps) => {
-    const [filter] = useState("");
-
     return (
         <div className="App text-sm font-fig">
             {/* CONTAINER */}
@@ -132,20 +103,18 @@ export const MobileHome = ({ projects }: HomeProps) => {
 
                 <div id="main" className=" w-full mt-[1em] mb-[4em]">
                     <div
-                        className="pb-[12em] flex justify-between"
+                        className="pb-[2em] flex justify-between"
                         id="profile"
                     >
                         <div>Megan Mai </div>
                         <div className="opacity-50">Product Design</div>
                     </div>
-                    {/* <Header></Header> */}
-                    {projects
-                        .filter(
-                            (project) =>
-                                filter === "" || project.tags.includes(filter),
-                        )
-                        .map((project) => (
+                    <div className="flex justify-center pb-[2em]">
+                        <img className="w-[140px] h-[140px] rounded-full object-contain" src="assets/thumbnails/marker_lines_2dots_transparent.png" alt="Profile" />
+                    </div>
+                    {projects.map((project) => (
                             <ProjectPreviewMobile
+                                key={project.title}
                                 thumbnail={project.thumbnail}
                                 title={project.title}
                                 date={project.date}
@@ -154,7 +123,7 @@ export const MobileHome = ({ projects }: HomeProps) => {
                                 external={project.external}
                             />
                         ))}
-                    <br></br>
+                    <div className="opacity-40 text-sm pb-[1em]">Website designed and developed by me, 2026</div>
                 </div>
             </div>
         </div>

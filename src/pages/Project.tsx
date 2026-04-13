@@ -52,7 +52,7 @@ const Project = ({ data }: ProjectProps) => {
     }
 
     //medium screen
-    if (useMediaQuery("only screen and (max-width : 1130px)")) {
+    if (useMediaQuery("only screen and (max-width : 800px)")) {
         return (
             <div className="leading-6 font-fig mx-auto mb-[4em] text-[.975em]">
                 <div className="mt-[5.5rem] min-w-[520px] w-[70%] mx-[auto]">
