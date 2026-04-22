@@ -4,7 +4,7 @@ import ProjectPreview, {
 } from "../components/ProjectPreview";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import Header from "../components/Header";
-import Sidebar, { SidebarMobile } from "../components/Sidebar";
+import Sidebar from "../components/Sidebar";
 import { ProjectData } from "./Project";
 
 interface HomeProps {
@@ -101,15 +101,19 @@ export const MobileHome = ({ projects }: HomeProps) => {
         <div className="App text-sm font-fig">
             {/* CONTAINER */}
             <div id="container" className=" mx-[.75rem]">
-                <SidebarMobile state="projects" />
+                <a href="/About" className="fixed top-[1em] right-[1em] opacity-40 hover:opacity-100 z-10">Info</a>
 
                 <div id="main" className=" w-full mt-[1em] mb-[4em]">
-                    <div
-                        className="pb-[2em] flex justify-between"
-                        id="profile"
-                    >
-                        <div>Megan Mai </div>
-                        <div className="opacity-50">Product Design</div>
+                    <div className="pb-[2em]" id="profile">
+                        <div>Megan Mai</div>
+                        <div className="italic">Design Engineer</div>
+                        <div className="opacity-60 leading-[1.3rem] whitespace-normal" style={{ textWrap: "balance" }}>
+                            Previously at{" "}
+                            <a className="underline hover:no-underline" href="https://nation.io/" target="_blank" rel="noreferrer">
+                                NATION
+                            </a>
+                            .
+                        </div>
                     </div>
                     <div className="flex justify-center pb-[2em]">
                         <img className="w-[140px] h-[140px] rounded-full object-contain" src="assets/thumbnails/marker_lines_2dots_transparent.png" alt="Profile" />

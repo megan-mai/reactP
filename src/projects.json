@@ -39,7 +39,7 @@
             "title": "Ericson Audio",
             "date": "2025",
             "skills": "HTML, CSS, javascript, react",
-            "url": "https://www.ericsonaudio.com/",
+            "url": "https://www.ericsonaaf.com/",
             "thumbnail": "assets/thumbnails/mattericson.png",
             "tags": [
                 "frontend"
@@ -1169,12 +1169,12 @@
             "title": "Attributive vs. Relational Properties in Similarity and Difference Judgments",
             "date": "2021",
             "skills": "research",
-            "url": "https://docs.google.com/document/d/1AU7iv_1onhmGSv963NVMDQHXUmHmlUDhR9rRPa5doss/",
+            "url": "https://cvl.psych.ucla.edu/a",
             "thumbnail": "assets/thumbnails/simdiff4.png",
             "tags": [
                 "research"
             ],
-            "desc": "A study on analogical reasoning. Done at the Computational Vision and Learning Lab at UCLA.",
+            "desc": "A study on analogical reasoning. Done at the Computational Vision and Learning Lab at UCLA. Text upon resquest.",
             "external": true,
             "sections": [
                 {

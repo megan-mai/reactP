@@ -50,7 +50,7 @@ const Sidebar = ({ projects }: SidebarProps) => {
         "#f59e0b", // orange-yellow
         "#d4d400", // neon yellow
         "#92400e", // brown
-        "#6b7280", // grey
+        "#e8441a", // red-orange
         "#556b2f", // dark olive
         "#a78bfa", // lavender
     ];
@@ -83,6 +83,8 @@ const Sidebar = ({ projects }: SidebarProps) => {
                     <a
                         className="underline hover:no-underline"
                         href="https://nation.io/"
+                    target="_blank"
+                    rel="noreferrer"
                     >
                         NATION
                     </a>

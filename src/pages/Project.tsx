@@ -54,7 +54,7 @@ const Project = ({ data }: ProjectProps) => {
     //medium screen
     if (useMediaQuery("only screen and (max-width : 800px)")) {
         return (
-            <div className="leading-6 font-fig mx-auto mb-[4em] text-[.975em]">
+            <div className="page-fadein leading-6 font-fig mx-auto mb-[4em] text-[.975em]">
                 <div className="mt-[5.5rem] min-w-[520px] w-[70%] mx-[auto]">
                     <HomeButtonMobile url={"/"}></HomeButtonMobile>
                     <ProjectHeader
@@ -120,7 +120,7 @@ const Project = ({ data }: ProjectProps) => {
         );
     } else {
         return (
-            <div className="leading-6 font-fig mx-auto mb-[4em] text-[.975em]">
+            <div className="page-fadein leading-6 font-fig mx-auto mb-[4em] text-[.975em]">
                 <div className="mt-[5.5rem] w-[45%] mx-[auto]">
                     <ProjectNav
                         titles={titles}
@@ -303,7 +303,7 @@ export const MobileProject = ({ data }: ProjectProps) => {
     }
 
     return (
-        <div className="flex flex-col font-fig text-sm h-[100vh]">
+        <div className="page-fadein flex flex-col font-fig text-sm h-[100vh]">
             {/* content */}
             <div className="flex grow basis-auto px-[1.2em] overflow-scroll">
                 <div>

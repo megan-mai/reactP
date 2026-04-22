@@ -1,13 +1,10 @@
-import { SidebarMobile } from "../components/Sidebar";
-
 const About = () => {
     return (
         <div className=" p-[1em] text-sm mb-[8em]">
-            <div className="pb-[8em] flex justify-between" id="profile">
-                <div>Megan Mai </div>
-                <div className="opacity-50">Product Design</div>
+            <a href="/" className="fixed top-[1em] right-[1em] opacity-40 hover:opacity-100 z-10">Return</a>
+            <div className="pb-[8em]" id="profile">
+                <div>Megan Mai</div>
             </div>
-            <SidebarMobile state="info"></SidebarMobile>
             <div className="opacity-50 mb-[.5em]">About</div>
             <header className="leading-[1.3rem] mb-[1.5rem]">
                 Hi, I'm a Brooklyn-based product designer exploring the
